@@ -1,0 +1,212 @@
+@clr:#fff;
+@font:'Montserrat';
+@height:60px;
+
+.form{
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  input::-webkit-input-placeholder{color:@clr;}
+  input::-moz-placeholder{color:@clr;}
+  input::-moz-placeholder{color:@clr;}
+  input::-ms-input-placeholder{color:@clr;}
+
+   fieldset{
+	 @media screen and (max-width: 600px) {
+	   margin: 20px auto;
+	 }
+   }
+
+   &__add{
+   	display: block;
+   	position:absolute;
+	color: #d5d5d5;
+	font-family: 'Montserrat';
+	font-size: 14px;
+	text-decoration: underline;
+    text-transform: initial;
+    margin: 0;
+    padding:5px 0;
+
+    &:hover{
+		background-image: linear-gradient(to top, #d4145a 0%, #fd874d 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+    }
+   }
+
+  &__group{
+	position: relative;
+	background: transparent;
+	width: 100%;
+	margin-bottom: 30px;
+  }
+
+	.input-css{
+		max-width: 510px;
+
+		@media screen and (max-width: 1130px) {
+			max-width: unset;
+		}
+	}
+
+	&__input{
+		width: 100%;
+		height: @height;
+		border: 1px solid #ffffff;
+		background: transparent;
+		color:@clr;
+		font-family:@font;
+		padding-left: 20px;
+		position: relative;
+		z-index: 9;
+		font-size: 16px;
+		border-radius: 4px;
+		transition: all 0.4s ease 0s;
+
+		&:active,
+		&:focus{
+			outline: none;
+			border-radius: 4px; 
+			border-image: linear-gradient(to top, #d4145a 0%, #fd874d 100%);
+			border-image-slice: 1;
+			border-width: 1px;     
+		}
+
+		&:placeholder-shown + label {
+			font-size: 20px;
+			transform: translateY(18px);
+			margin-left: 20px;
+			color:@clr;
+		}
+
+		@media screen and (max-width: 991px) {
+			width: 100%;
+		}
+	}
+
+	&__textarea{
+		position: relative;
+		padding: 0;
+		background:transparent;
+		width: 100%;
+		min-height: 60px;
+		height: 60px;
+		border: 1px solid #ffffff;
+		border-radius: 4px;
+		padding:20px;
+		color:@clr;
+		overflow: hidden;
+
+		&:active,
+		&:focus{
+			outline: none;
+			border-radius: 4px; 
+			border-image: linear-gradient(to top, #d4145a 0%, #fd874d 100%);
+			border-image-slice: 1;
+			border-width: 1px;     
+		}		
+
+		&:placeholder-shown + label {
+			font-size: 20px;
+			transform: translateY(18px);
+			margin-left: 20px;
+			color:@clr;
+		}		
+	}   
+
+	&__label{
+		font-family:@font;
+		position: absolute;
+		top: 2px;
+		left: 0;
+		transition: all 0.1s;
+		opacity: 1;
+		transform: translateY(calc(0px));
+		z-index: 1;
+		font-size: 12px;
+		color:@clr;
+		margin-left: 20px;
+	}
+
+	&__select{
+		max-width: 330px;
+	}
+
+  // @media screen and (max-width: 600px) {
+  //   display: block;
+  //   text-align: center;
+  // }
+
+  &__submit{
+//  	display: flex;
+	font-family:@font;
+	width: 320px;
+	height: @height;
+	box-shadow: 0 14px 15px rgba(255, 121, 56, 0.43);
+	border-radius: 4px;
+	background-color: #0d0d0d;
+	background-image: linear-gradient(to top, #d4145a 0%, #fd874d 100%);
+	border: none;
+	color: @clr;
+	font-size: 18px;
+	transition: all 0.4s ease 0s;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	padding-left: 48px;
+
+	&:hover{
+		box-shadow: 0 4px 10px rgba(255, 121, 56, 0.43);
+	}
+  }
+
+  &__ib{
+  	position: relative;
+  }
+
+  &__img-phone{
+  	position:absolute;
+  	top:0;
+  	left:0;
+    margin-top: 20px;
+    margin-left: 48px;  	
+  }
+
+	&__from{
+		text-transform: uppercase;
+		&:after{
+			content:'';
+			background-image: url(./img/depat.png);
+			background-position:center;
+			background-repeat:no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 999;
+			height: 30px;
+			width: 24px;
+			padding:15px 20px;
+		}
+	}
+
+	&__from-act{
+		&:after{
+			content:'';
+			background-image: url(./img/depat-act.png);
+			background-position:center;
+			background-repeat:no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 999;
+			height: 30px;
+			width: 24px;
+			padding:15px 20px;
+		}
+	}   
+}
